@@ -12,25 +12,25 @@
 @font-face
 {
     font-family: "Neucha";
-    src: url("/fonts/Neucha/Neucha-Regular.ttf") format("truetype");
+    src: url("./fonts/Neucha/Neucha-Regular.ttf") format("truetype");
 }
 
 @font-face
 {
     font-family: "Open Sans";
-    src: url("/fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+    src: url("./fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
 }
 
 @font-face
 {
     font-family: "Open Sans Bold";
-    src: url("/fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+    src: url("./fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
 }
 
 @font-face
 {
     font-family: "Open Sans Italic";
-    src: url("/fonts/Open_Sans/OpenSans-Italic.ttf") format("truetype");
+    src: url("./fonts/Open_Sans/OpenSans-Italic.ttf") format("truetype");
 }
 
 /* GENERAL */
