@@ -1,3 +1,4 @@
 fonts/**
 *.sublime-project
 *.sublime-workspace
+colors_*.png
