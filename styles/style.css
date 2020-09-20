@@ -1,0 +1,142 @@
+/* VARIABLES */
+
+:root
+{
+    --main-bg-color: #211e22;
+    --main-text-color: #D9D9D9;
+    --highlight-color: #F08681;
+}
+
+/* FONTS */
+
+@font-face
+{
+    font-family: "Neucha";
+    src: url("/fonts/Neucha/Neucha-Regular.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-family: "Open Sans";
+    src: url("/fonts/Open_Sans/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-family: "Open Sans Bold";
+    src: url("/fonts/Open_Sans/OpenSans-Bold.ttf") format("truetype");
+}
+
+@font-face
+{
+    font-family: "Open Sans Italic";
+    src: url("/fonts/Open_Sans/OpenSans-Italic.ttf") format("truetype");
+}
+
+/* GENERAL */
+
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul
+{
+    list-style: none;
+}
+
+body
+{
+    background-color: var(--main-bg-color);
+    font-size: 110%;
+    font-family: "Open Sans";
+    color: var(--main-text-color);
+}
+
+/* NAVIGATION */
+
+nav
+{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 5% 0.5% 5%;
+    background: linear-gradient(180deg, var(--main-bg-color) 90%, transparent 100%);
+    text-transform: uppercase;
+}
+
+nav .links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    font-family: "Neucha", sans-serif;
+}
+
+nav li
+{
+    cursor: pointer;
+}
+
+nav .dropdown
+{
+    position: relative;
+}
+
+nav .dropdown ul
+{
+    position: absolute;
+    display: none;
+    border: 1px solid var(--main-text-color);
+    padding: 10% 10%;
+    background: var(--main-bg-color);
+}
+
+nav .dropdown ul li
+{
+    margin: 10% 0;
+}
+
+nav .dropdown:hover ul
+{
+    display: block;
+}
+
+/* SECTION */
+
+section
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    padding: 0 35%;
+}
+
+aside img,
+aside iframe
+{
+    width: 250px;
+}
+
+/* FOOTER */
+
+footer
+{
+    margin-top: 5%;
+    border-top: 1px solid var(--main-text-color);
+    padding: 1% 1%;
+    font-size: 110%;
+    font-family: "Neucha", sans-serif;
+    opacity: 50%;
+}
