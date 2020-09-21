@@ -69,6 +69,18 @@
         </article>
     </section>
 
+    <!-- MODAL -->
+
+    <div id="credits" class="modal-container">
+        <div class="modal">
+            <span class="x-modal" onclick="hideCredits()">✘</span>
+            <h5>
+                Site réalisé par<br>
+                <a href="mailto:gasnault.louis@gmail.com">Louis Gasnault</a>
+            </h5>
+        </div>
+    </div>
+
     <footer>
         <!-- LIENS -->
         <ul>
@@ -81,9 +93,24 @@
         <ul>
             <li><a href="https://soundcloud.com/user-867393924" target="_blank">SoundCloud</a></li>
             <li><a href="https://www.youtube.com/channel/UCVwaCVtMhCSqrd7coldxT1A" target="_blank">YouTube</a></li>
-            <li><a href="mailto:gasnault.louis@gmail.com">Crédits</a></li>
+            <li onclick="showCredits()">Crédits</li>
         </ul>
     </footer>
+
+    <script type="text/javascript">
+        let credits = document.getElementById("credits");
+        function showCredits()
+        {
+            credits.style.visibility = "visible";
+            credits.style.opacity = "100%";
+        }
+
+        function hideCredits()
+        {
+            credits.style.visibility = "hidden";
+            credits.style.opacity = "0";
+        }
+    </script>
 
 </body>
 </html>
