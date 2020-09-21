@@ -3,8 +3,11 @@
 :root
 {
     --main-bg-color: #211e22;
+    --dark-color: #19171a;
     --main-text-color: #D9D9D9;
     --highlight-color: #F08681;
+
+    --transition-speed: 0.5s;
 }
 
 /* FONTS */
@@ -92,25 +95,49 @@ nav li
 nav .dropdown
 {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
 }
 
 nav .dropdown ul
 {
     position: absolute;
-    display: none;
-    border: 1px solid var(--main-text-color);
+    visibility: hidden;
+    opacity: 0;
+    transition: all var(--transition-speed) ease;
+    margin-top: 15%;
     padding: 10% 10%;
-    background: var(--main-bg-color);
+    background: var(--dark-color);
 }
 
-nav .dropdown ul li
+nav .dropdown li
 {
+    position: relative;
     margin: 10% 0;
+}
+
+nav .dropdown li:after
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all var(--transition-speed) ease;
+    border-bottom: 1px solid var(--highlight-color);
+    width: 0;
 }
 
 nav .dropdown:hover ul
 {
-    display: block;
+    visibility: visible;
+    opacity: 100%;
+}
+
+nav .dropdown li:hover:after
+{
+    width: 100%;
 }
 
 /* SECTION */
@@ -118,25 +145,57 @@ nav .dropdown:hover ul
 section
 {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     margin-top: 5%;
-    padding: 0 35%;
+    padding: 0 30%;
+}
+
+aside
+{
+    flex: 200%;
+    max-width: 200%;
+    padding: 0 2%;
 }
 
 aside img,
 aside iframe
 {
-    width: 250px;
+    vertical-align: middle;
+    width: 100%;
+    padding: 4% 0;
 }
 
 /* FOOTER */
 
 footer
 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 5%;
     border-top: 1px solid var(--main-text-color);
     padding: 1% 1%;
     font-size: 110%;
     font-family: "Neucha", sans-serif;
     opacity: 50%;
+}
+
+footer ul
+{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+footer li
+{
+    margin: 0 5%;
+}
+
+footer .copy
+{
+    margin: 0 1%;
+    border-left: 1px dashed var(--main-text-color);
+    border-right: 1px dashed var(--main-text-color);
+    padding: 0 1%;
 }
