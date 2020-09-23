@@ -38,10 +38,10 @@
             <!-- <iframe
                 src="https://www.youtube-nocookie.com/embed/e-1JgOhJtwQ" frameborder="0" allowfullscreen>
             </iframe> -->
-            <img src="medias/cover_0.png">
-            <img src="medias/pic_0.jpg">
-            <img src="medias/pic_1.jpg">
-            <img src="medias/pic_2.jpg">
+            <img src="medias/cover_0.png" onclick="zoom(this.src)">
+            <img src="medias/pic_0.jpg" onclick="zoom(this.src)">
+            <img src="medias/pic_1.jpg" onclick="zoom(this.src)">
+            <img src="medias/pic_2.jpg" onclick="zoom(this.src)">
         </aside>
         <article>
             <h2>Présentation</h2>
@@ -69,17 +69,7 @@
         </article>
     </section>
 
-    <!-- MODAL -->
-
-    <div id="credits" class="modal-container">
-        <div class="modal">
-            <span class="x-modal" onclick="hideCredits()">✘</span>
-            <h5>
-                Site réalisé par<br>
-                <a href="mailto:gasnault.louis@gmail.com">Louis Gasnault</a>
-            </h5>
-        </div>
-    </div>
+    <!-- FOOTER -->
 
     <footer>
         <!-- LIENS -->
@@ -93,22 +83,51 @@
         <ul>
             <li><a href="https://soundcloud.com/user-867393924" target="_blank">SoundCloud</a></li>
             <li><a href="https://www.youtube.com/channel/UCVwaCVtMhCSqrd7coldxT1A" target="_blank">YouTube</a></li>
-            <li onclick="showCredits()">Crédits</li>
+            <li onclick="show('credits')">Crédits</li>
         </ul>
     </footer>
 
+    <!-- MODALS -->
+
+    <div id="credits" class="modal-container">
+        <span class="x-modal" onclick="hide('credits')">✘</span> 
+        <div class="modal">
+            <h5>
+                Site réalisé par<br>
+                <a href="mailto:gasnault.louis@gmail.com">Louis Gasnault</a>
+            </h5>
+        </div>
+    </div>
+
+    <div id="zoom" class="modal-container">
+        <span class="x-modal" onclick="hide('zoom')">✘</span>
+        <div class="modal">
+            <img id="zoomImg" src="">
+        </div>
+    </div>
+
     <script type="text/javascript">
-        let credits = document.getElementById("credits");
-        function showCredits()
+        
+        let zoomImg = document.getElementById("zoomImg");
+
+        function show(id)
         {
-            credits.style.visibility = "visible";
-            credits.style.opacity = "100%";
+            let modal = document.getElementById(id);
+            modal.style.visibility = "visible";
+            modal.style.opacity = "100%";
         }
 
-        function hideCredits()
+        function hide(id)
         {
-            credits.style.visibility = "hidden";
-            credits.style.opacity = "0";
+            let modal = document.getElementById(id);
+            modal.style.visibility = "hidden";
+            modal.style.opacity = "0";
+        }
+
+        function zoom(src)
+        {
+            zoomImg.src = src;
+            show("zoom");
         }
     </script>
 
