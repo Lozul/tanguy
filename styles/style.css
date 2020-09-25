@@ -2,7 +2,7 @@
 
 :root
 {
-    --nav: #211e22;
+    --nav: rgba(25, 23, 26, 0.8);
     --bg: #252226;
     --black: #19171a;
     --text: #D9D9D9;
@@ -60,6 +60,8 @@ ul
 
 body
 {
+    background-image: url("../medias/bg.png");
+    background-attachment: fixed;
     background-color: var(--bg);
     font-size: 110%;
     font-family: "Open Sans";
@@ -82,7 +84,7 @@ nav
     justify-content: space-between;
     align-items: center;
     padding: 0.5% 5% 0.5% 5%;
-    background: var(--nav);
+    background-color: var(--nav);
     text-transform: uppercase;
 }
 
@@ -117,7 +119,7 @@ nav .dropdown ul
     transition: all var(--transition-speed) ease;
     margin-top: 15%;
     padding: 10% 10%;
-    background: var(--black);
+    background: var(--nav);
 }
 
 nav .dropdown li
@@ -155,7 +157,7 @@ section
     display: flex;
     align-items: center;
     margin-top: 5%;
-    padding: 0 30%;
+    padding: 0 25%;
 }
 
 aside
@@ -163,6 +165,12 @@ aside
     flex: 200%;
     max-width: 200%;
     padding: 0 2%;
+}
+
+article
+{
+    background-color: var(--black);
+    padding: 4%;
 }
 
 aside img,
@@ -182,6 +190,7 @@ footer
     align-items: center;
     margin-top: 5%;
     border-top: 1px solid var(--text);
+    background-color: var(--black);
     padding: 1% 1%;
     font-size: 110%;
     font-family: "Neucha", sans-serif;
