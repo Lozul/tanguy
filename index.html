@@ -38,10 +38,10 @@
             <!-- <iframe
                 src="https://www.youtube-nocookie.com/embed/e-1JgOhJtwQ" frameborder="0" allowfullscreen>
             </iframe> -->
-            <img src="medias/cover_0.png" onclick="zoom(this.src)">
-            <img src="medias/pic_0.jpg" onclick="zoom(this.src)">
-            <img src="medias/pic_1.jpg" onclick="zoom(this.src)">
-            <img src="medias/pic_2.jpg" onclick="zoom(this.src)">
+            <img src="medias/cover_0.png">
+            <img src="medias/pic_0.jpg">
+            <img src="medias/pic_1.jpg">
+            <img src="medias/pic_2.jpg">
         </aside>
         <article>
             <h2>Présentation</h2>
@@ -86,50 +86,5 @@
             <li onclick="show('credits')">Crédits</li>
         </ul>
     </footer>
-
-    <!-- MODALS -->
-
-    <div id="credits" class="modal-container">
-        <span class="x-modal" onclick="hide('credits')">✘</span> 
-        <div class="modal">
-            <h5>
-                Site réalisé par<br>
-                <a href="mailto:gasnault.louis@gmail.com">Louis Gasnault</a>
-            </h5>
-        </div>
-    </div>
-
-    <div id="zoom" class="modal-container">
-        <span class="x-modal" onclick="hide('zoom')">✘</span>
-        <div class="modal">
-            <img id="zoomImg" src="">
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        
-        let zoomImg = document.getElementById("zoomImg");
-
-        function show(id)
-        {
-            let modal = document.getElementById(id);
-            modal.style.visibility = "visible";
-            modal.style.opacity = "100%";
-        }
-
-        function hide(id)
-        {
-            let modal = document.getElementById(id);
-            modal.style.visibility = "hidden";
-            modal.style.opacity = "0";
-        }
-
-        function zoom(src)
-        {
-            zoomImg.src = src;
-            show("zoom");
-        }
-    </script>
-
 </body>
 </html>
