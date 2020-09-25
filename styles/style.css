@@ -4,8 +4,11 @@
 {
     --nav: rgba(25, 23, 26, 0.8);
     --bg: #252226;
+    --bg-footer: rgba(37, 34, 38, 0.5);
     --black: #19171a;
+
     --text: #D9D9D9;
+    --text-footer: #7e7e7f;
     --highlight: #F08681;
     --white: #fff3ff;
     --selection: rgba(217, 217, 217, 0.1);
@@ -128,7 +131,7 @@ nav .dropdown li
     margin: 10% 0;
 }
 
-nav .dropdown li:after
+nav .dropdown li::after
 {
     content: "";
     position: absolute;
@@ -145,7 +148,7 @@ nav .dropdown:hover ul
     opacity: 100%;
 }
 
-nav .dropdown li:hover:after
+nav .dropdown li:hover::after
 {
     width: 100%;
 }
@@ -189,12 +192,12 @@ footer
     justify-content: center;
     align-items: center;
     margin-top: 5%;
-    border-top: 1px solid var(--text);
-    background-color: var(--black);
+    border-top: 1px solid var(--text-footer);
+    background-color: var(--bg-footer);
     padding: 1% 1%;
     font-size: 110%;
     font-family: "Neucha", sans-serif;
-    opacity: 50%;
+    color: var(--text-footer);
 }
 
 footer ul
@@ -213,7 +216,56 @@ footer li
 footer .copy
 {
     margin: 0 1%;
-    border-left: 1px dashed var(--text);
-    border-right: 1px dashed var(--text);
+    border-left: 1px dashed var(--text-footer);
+    border-right: 1px dashed var(--text-footer);
     padding: 0 1%;
+}
+
+/* POPUP */
+
+.popup-container
+{
+    position: relative;
+}
+
+.popup
+{
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: 160px;
+    background-color: var(--bg);
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    transition: all var(--transition-speed) ease;
+    color: var(--text);
+}
+
+.popup a
+{
+    color: var(--highlight);
+    font-weight: bold;
+}
+
+.popup::after
+{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--bg) transparent transparent transparent;
+}
+
+.popup-container:hover .popup
+{
+    visibility: visible;
+    opacity: 100%;
 }
