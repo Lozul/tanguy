@@ -5,6 +5,7 @@ Mon amis Tanguy Dusserre m'a demandé de lui construire un site web pour partage
 ## TODO
 - [x] Optimiser les images
 - [x] Zoom sur les images
-- [ ] Systeme auto pour ajouter les paroles / albums
-- [ ] Faire test police
+- [x] Systeme auto pour ajouter les paroles / albums
+- [ ] Bio dans txt pour faciliter l'edition
 - [ ] Favicon
+- [x] Credits Gregoire photos

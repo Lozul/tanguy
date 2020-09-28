@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Si j'étais chanteur",
+        "cover": "cover_0.png",
+        "SCURL": "https://soundcloud.com/user-867393924/sets/si-jetais-chanteur",
+        "lyrics": "si_jetais_chanteur.txt",
+        "infos":
+        [
+            "Paroles, musiques, arrangements : Tanguy Dusserre",
+            "Avec la participation d'Anna Cazabon sur \"C'est notre histoire\"",
+            "Photo : Grégoire Michas",
+            "2017"
+        ]
+    },
+    {
+        "name": "Sur mes airs",
+        "cover": "cover_1.jpg",
+        "SCURL": "https://soundcloud.com/user-867393924/sets/sur-mes-airs",
+        "infos":
+        [
+            "2018"
+        ]
+    },
+    {
+        "name": "Quelques mélodies sans paroles...",
+        "cover": "cover_2.jpg",
+        "SCURL": "https://soundcloud.com/user-867393924/sets/quelques-melodies-sans-paroles",
+        "infos":
+        [
+            "2018"
+        ]
+    }
+]
