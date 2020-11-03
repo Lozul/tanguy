@@ -16,8 +16,11 @@
         "name": "Sur mes airs",
         "cover": "cover_1.jpg",
         "SCURL": "https://soundcloud.com/user-867393924/sets/sur-mes-airs",
+        "lyrics":"sur_mes_airs.txt",
         "infos":
         [
+            "Paroles, musiques, arrangements : Tanguy Dusserre",
+            "Photo : Grégoire Michas",
             "2018"
         ]
     },

@@ -89,6 +89,7 @@ nav
     padding: 0.5% 5% 0.5% 5%;
     background-color: var(--nav);
     text-transform: uppercase;
+    z-index: 666;
 }
 
 nav .links
@@ -191,6 +192,11 @@ aside iframe
     vertical-align: middle;
     width: 100%;
     padding: 4% 0;
+}
+
+#presentation p
+{
+    margin: 3% 0;
 }
 
 .paroles

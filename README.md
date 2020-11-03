@@ -1,6 +1,6 @@
 # Site web personnel de Tanguy Dusserre
 
-Mon amis Tanguy Dusserre m'a demandé de lui construire un site web pour partager ses créations musicales.
+Mon ami Tanguy Dusserre m'a demandé de lui construire un site web pour partager ses créations musicales.
 
 ## TODO
 - [x] Optimiser les images
